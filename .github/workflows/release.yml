@@ -1,43 +1,24 @@
 name: Semantic Release
-permissions:
-  contents: write
 
 on:
   push:
     branches:
-      - main  # Trigger on pushes to the main branch
+      - master
 
 jobs:
   release:
     runs-on: ubuntu-latest
     concurrency: release
     permissions:
-      contents: write
       id-token: write
+      contents: write
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set Up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install Dependencies
-        run: |
-          pip install python-semantic-release
-
-      # - name: Python Semantic Release
-      #   uses: python-semantic-release/python-semantic-release@v9.21.0
-
-      - name: Run Semantic Release
+      - name: Python Semantic Release
+        uses: python-semantic-release/python-semantic-release@v9.8.8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "action@github.com"
-          semantic-release publish -D commit_author="github-actions <action@github.com>"
