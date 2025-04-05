@@ -16,6 +16,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Up Python
         uses: actions/setup-python@v4
@@ -33,4 +36,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          semantic-release publish
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
+          semantic-release publish -D commit_author="github-actions <action@github.com>"
