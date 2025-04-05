@@ -3,4 +3,4 @@ def main():
     """
     main
     """
-    print("Hello World! trigger")
+    print("Hello World!")
