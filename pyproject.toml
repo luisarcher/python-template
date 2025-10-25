@@ -1,2 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "app"
+version = "0.1.0"
+description = "Awesome app created by author"
+readme = "README.md"
+authors = [
+    { name = "author" }
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/luisarcher/python_template/"
+
+[project.scripts]
+app = "app.__main__:main"
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+    "coverage",
+    "flake8",
+    "black",
+    "isort",
+    "pytest-cov",
+    "mypy",
+]
+
+[tool.setuptools.packages.find]
+exclude = ["tests", ".github"]
+
 [tool.semantic_release]
-version_variable = "setup.py:__version__"
+version_toml = ["pyproject.toml:project.version"]
+version_variables = ["app/VERSION"]
+build_command = "pip install build && python -m build"
