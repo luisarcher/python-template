@@ -39,5 +39,5 @@ exclude = ["tests", ".github"]
 
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
-version_variables = ["app/VERSION"]
+version_variables = ["app/__init__.py:__version__"]
 build_command = "pip install build && python -m build"
