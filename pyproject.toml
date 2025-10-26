@@ -21,7 +21,7 @@ dependencies = []
 Homepage = "https://github.com/luisarcher/python_template/"
 
 [project.scripts]
-app = "app.__main__:main"
+app = "app.app:main"
 
 [project.optional-dependencies]
 test = [
