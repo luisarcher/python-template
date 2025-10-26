@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "app"
-version = "0.3.0"
+version = "0.1.0"
 description = "Awesome app created by author"
 readme = "README.md"
 authors = [
