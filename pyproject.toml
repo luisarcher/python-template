@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=62.6", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -15,24 +15,14 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
-dependencies = []
+dependencies = {file = ["requirements.txt"]}
+optional-dependencies = {dev = { file = ["requirements-dev.txt"] }}
 
 [project.urls]
 Homepage = "https://github.com/luisarcher/python_template/"
 
 [project.scripts]
 app = "app.app:main"
-
-[project.optional-dependencies]
-test = [
-    "pytest",
-    "coverage",
-    "flake8",
-    "black",
-    "isort",
-    "pytest-cov",
-    "mypy",
-]
 
 [tool.setuptools.packages.find]
 exclude = ["tests", ".github"]
