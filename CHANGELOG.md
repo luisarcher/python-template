@@ -1,6 +1,26 @@
 # CHANGELOG
 
+## v0.3.0 (2025-10-26)
+
+### Chore
+
+* chore: Remove __main__.py file ([`02827ff`](https://github.com/luisarcher/python-template/commit/02827ff5cd61f39397aa974607591344d52a1f4b))
+
+* chore: Remove setup.py ([`cfb782d`](https://github.com/luisarcher/python-template/commit/cfb782d1b958ee80bb5f67a2b8c856cf04b17ecf))
+
+### Feature
+
+* feat: Version is now stored at app__version__ ([`a5143f5`](https://github.com/luisarcher/python-template/commit/a5143f5910cd6006d0663540607bef5e41063292))
+
+### Unknown
+
+* Merge branch &#39;main&#39; of github.com:luisarcher/python-template ([`faaa083`](https://github.com/luisarcher/python-template/commit/faaa083e6afc9815cc93cc40b08e2b8584330253))
+
 ## v0.2.0 (2025-04-05)
+
+### Chore
+
+* chore: comment test requirements by default ([`e47eac3`](https://github.com/luisarcher/python-template/commit/e47eac36cdd46ba84a4077b453f52704a35eade8))
 
 ### Feature
 
