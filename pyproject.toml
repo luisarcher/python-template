@@ -48,7 +48,7 @@ exclude = ["tests", ".github"]
 [tool.semantic_release]
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["app/__init__.py:__version__"]
-build_command = "uv build"
+build_command = "pip install uv && uv build"
 branch = "main"
 changelog_file = "CHANGELOG.md"
 upload_to_vcs_release = true
