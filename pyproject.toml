@@ -71,5 +71,5 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B", "SIM"]
 
-[tool.ty]
+[tool.ty.environment]
 python-version = "3.11"
